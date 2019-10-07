@@ -17,8 +17,8 @@ import matplotlib.pyplot as plt
 def getSquare():
     img = []
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Shapes\\shapes\\square\\*.png"
-    for file in os.listdir(path):
-#         print(file)
+    for file in glob.glob(path):
+#          print(file)
         a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
         img.append(a)
     return img
