@@ -14,41 +14,74 @@ import matplotlib.pyplot as plt
 
 #path name needs change everytime we run from a different computer
 
-def getSquare():
+def getSet00():
     img = []
-    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Shapes\\shapes\\square\\*.png"
+    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_00\\*.jpg"
     for file in glob.glob(path):
 #          print(file)
         a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
         img.append(a)
     return img
 
-def getCircle():
+def getSet01():
     img = []
-    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Shapes\\shapes\\circle\\*.png"
+    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_01\\*.jpg"
     for file in glob.glob(path):
 #         print(file)
         a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
         img.append(a)
     return img
 
-def getStar():
+def getSet02():
     img = []
-    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Shapes\\shapes\\star\\*.png"
+    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_02\\*.jpg"
     for file in glob.glob(path):
 #         print(file)
         a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
         img.append(a)
     return img
 
-def getTriangle():
+def getSet03():
     img = []
-    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Shapes\\shapes\\triangle\\*.png"
+    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_03\\*.jpg"
     for file in glob.glob(path):
 #       print(file)
         a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
         img.append(a)
     return img
+
+def getSet04():
+    img = []
+    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_04\\*.jpg"
+    for file in glob.glob(path):
+#       print(file)
+        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+        img.append(a)
+    return img
+
+
+
+def getSet05():
+    img = []
+    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_05\\*.jpg"
+    for file in glob.glob(path):
+#       print(file)
+        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+        img.append(a)
+    return img
+
+
+
+def getSet06():
+    img = []
+    path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_06\\*.jpg"
+    for file in glob.glob(path):
+#       print(file)
+        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+        img.append(a)
+    return img
+
+
 
 def reshape(data):
     image = data.reshape(200, 200)
