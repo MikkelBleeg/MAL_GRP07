@@ -16,11 +16,15 @@ import matplotlib.pyplot as plt
 
 def getSet00():
     img = []
+    #Set Path
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_00\\*.jpg"
     for file in glob.glob(path):
 #          print(file)
-        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-        img.append(a)
+        a=cv2.imread(file, cv2.COLOR_BGR2RGB)
+        #Change to right colour order
+        b,g,r = cv2.split(a)           # get b, g, r
+        NewIm = cv2.merge([r,g,b])     # switch it to r, g, b
+        img.append(NewIm)
     return img
 
 def getSet01():
@@ -28,8 +32,10 @@ def getSet01():
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_01\\*.jpg"
     for file in glob.glob(path):
 #         print(file)
-        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-        img.append(a)
+        a=cv2.imread(file, cv2.COLOR_BGR2RGB)
+        b,g,r = cv2.split(a)           # get b, g, r
+        NewIm = cv2.merge([r,g,b])     # switch it to r, g, b
+        img.append(NewIm)
     return img
 
 def getSet02():
@@ -37,8 +43,10 @@ def getSet02():
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_02\\*.jpg"
     for file in glob.glob(path):
 #         print(file)
-        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-        img.append(a)
+        a=cv2.imread(file, cv2.COLOR_BGR2RGB)
+        b,g,r = cv2.split(a)           # get b, g, r
+        NewIm = cv2.merge([r,g,b])     # switch it to r, g, b
+        img.append(NewIm)
     return img
 
 def getSet03():
@@ -46,8 +54,10 @@ def getSet03():
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_03\\*.jpg"
     for file in glob.glob(path):
 #       print(file)
-        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-        img.append(a)
+        a=cv2.imread(file, cv2.COLOR_BGR2RGB)
+        b,g,r = cv2.split(a)           # get b, g, r
+        NewIm = cv2.merge([r,g,b])     # switch it to r, g, b
+        img.append(NewIm)
     return img
 
 def getSet04():
@@ -55,8 +65,10 @@ def getSet04():
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_04\\*.jpg"
     for file in glob.glob(path):
 #       print(file)
-        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-        img.append(a)
+        a=cv2.imread(file, cv2.COLOR_BGR2RGB)
+        b,g,r = cv2.split(a)           # get b, g, r
+        NewIm = cv2.merge([r,g,b])     # switch it to r, g, b
+        img.append(NewIm)
     return img
 
 
@@ -66,8 +78,10 @@ def getSet05():
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_05\\*.jpg"
     for file in glob.glob(path):
 #       print(file)
-        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-        img.append(a)
+        a=cv2.imread(file, cv2.COLOR_BGR2RGB)
+        b,g,r = cv2.split(a)           # get b, g, r
+        NewIm = cv2.merge([r,g,b])     # switch it to r, g, b
+        img.append(NewIm)
     return img
 
 
@@ -77,8 +91,10 @@ def getSet06():
     path = "C:\\Users\\Trung\\Documents\\ITMAL\\MAL_GRP07\\Exercise05\\Dataset\\CAT_06\\*.jpg"
     for file in glob.glob(path):
 #       print(file)
-        a=cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-        img.append(a)
+        a=cv2.imread(file, cv2.COLOR_BGR2RGB)
+        b,g,r = cv2.split(a)           # get b, g, r
+        NewIm = cv2.merge([r,g,b])     # switch it to r, g, b
+        img.append(NewIm)
     return img
 
 
