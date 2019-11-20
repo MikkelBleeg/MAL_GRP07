@@ -42,7 +42,7 @@ def reshape(data):
     return image
 
 def get_yStar():
-    return np.array(["Star" for s in getCircle()])
+    return np.array(["Star" for s in getStar()])
     
     
 def get_yCircle():
@@ -50,11 +50,11 @@ def get_yCircle():
 
     
 def get_ySquare():
-    return np.array(["Square" for s in getCircle()])
+    return np.array(["Square" for s in getSquare()])
     
     
 def get_yTriangle():
-    return np.array(["Triangle" for s in getCircle()])
+    return np.array(["Triangle" for s in getTriangle()])
     
 
 
