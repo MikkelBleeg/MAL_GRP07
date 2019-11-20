@@ -68,7 +68,6 @@ def resizeAllShapesArrays():
     
     return star, circle, square, triangle
 
-<<<<<<< HEAD
 def getShapes():
     xAppend = []
     yAppend = []
@@ -104,18 +103,7 @@ def getShapes():
         xAppend.append(triangle[s])
     for s in range(len(ytriangle)):
         yAppend.append(ytriangle[s])
-=======
-def getShapes():    
-    X  = np.array([getStar()[:3700]])
-    X.extend(getCircle()[:3700])
-    X.extend(getSquare()[:3700])
-    X.extend(getTriangle()[:3700])
-    
-    y = np.array([get_yStar()[:3700]])
-    y.extend(get_yCircle()[:3700])
-    y.extend(get_ySquare()[:3700])
-    y.extend(get_yTriangle()[:3700])
->>>>>>> a13ccc49517308102600ae6898887b12f6c1fdea
+
     
     return xAppend, yAppend
     
