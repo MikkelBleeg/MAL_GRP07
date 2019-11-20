@@ -67,17 +67,42 @@ def resizeAllShapesArrays():
     return star, circle, square, triangle
 
 def getShapes():
-    size = getCircle().shape[0]
+    xAppend = []
+    yAppend = []
+    star = getStar()
+    circle = getCircle()
+    square = getSquare()
+    triangle = getTriangle()
     
-    star = getStar()[:size]
-    circle = getCircle()[:size]
-    square = getSquare()[:size]
-    triangle = getTriangle()[:size]
+    ystar = get_yStar()
+    ycircle = get_yCircle()
+    ysquare = get_ySquare()
+    ytriangle = get_yTriangle()
     
-    X = np.vstack((star, circle, square, triangle))
-    y = np.vstack((get_yStar(), get_yTriangle(), get_yCircle(), get_ySquare()))
     
-    return X, y
+    for i in range(len(star)):
+        xAppend.append(star[i])
+        
+    for i in range(len(ystar)):
+        yAppend.append(ystar[i])
+        
+    for o in range(len(circle)):
+        xAppend.append(circle[o])
+    for o in range(len(ycircle)):
+        yAppend.append(ycircle[o])
+      
+    for n in range(len(square)):
+        xAppend.append(square[n])
+    for n in range(len(ysquare)):
+        yAppend.append(ysquare[n])
+    
+    
+    for s in range(len(triangle)):
+        xAppend.append(triangle[s])
+    for s in range(len(ytriangle)):
+        yAppend.append(ytriangle[s])
+    
+    return xAppend, yAppend
     
 
 
