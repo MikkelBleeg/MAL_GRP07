@@ -40,3 +40,44 @@ def getTriangle():
 def reshape(data):
     image = data.reshape(200, 200)
     return image
+
+def get_yStar():
+    return np.array(["Star" for s in getCircle()])
+    
+    
+def get_yTriangle():
+    return np.array(["Triangle" for s in getCircle()])
+    
+    
+def get_yCircle():
+    return np.array(["Circle" for s in getCircle()])
+    
+    
+def get_ySquare():
+    return np.array(["Square" for s in getCircle()])
+
+def resizeAllShapesArrays():
+    size = getCircle().shape[0]
+    
+    star = getStar()[:size]
+    circle = getCircle()[:size]
+    square = getSquare()[:size]
+    triangle = getTriangle()[:size]
+    
+    return star, circle, square, triangle
+
+def getShapes():
+    size = getCircle().shape[0]
+    
+    star = getStar()[:size]
+    circle = getCircle()[:size]
+    square = getSquare()[:size]
+    triangle = getTriangle()[:size]
+    
+    X = np.vstack((star, circle, square, triangle))
+    y = np.vstack((get_yStar(), get_yTriangle(), get_yCircle(), get_ySquare()))
+    
+    return X, y
+    
+
+
