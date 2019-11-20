@@ -45,16 +45,18 @@ def get_yStar():
     return np.array(["Star" for s in getCircle()])
     
     
-def get_yTriangle():
-    return np.array(["Triangle" for s in getCircle()])
-    
-    
 def get_yCircle():
     return np.array(["Circle" for s in getCircle()])
-    
+
     
 def get_ySquare():
     return np.array(["Square" for s in getCircle()])
+    
+    
+def get_yTriangle():
+    return np.array(["Triangle" for s in getCircle()])
+    
+
 
 def resizeAllShapesArrays():
     size = getCircle().shape[0]
@@ -66,16 +68,16 @@ def resizeAllShapesArrays():
     
     return star, circle, square, triangle
 
-def getShapes():
-    size = getCircle().shape[0]
+def getShapes():    
+    X  = np.array([getStar()[:3700]])
+    X.extend(getCircle()[:3700])
+    X.extend(getSquare()[:3700])
+    X.extend(getTriangle()[:3700])
     
-    star = getStar()[:size]
-    circle = getCircle()[:size]
-    square = getSquare()[:size]
-    triangle = getTriangle()[:size]
-    
-    X = np.vstack((star, circle, square, triangle))
-    y = np.vstack((get_yStar(), get_yTriangle(), get_yCircle(), get_ySquare()))
+    y = np.array([get_yStar()[:3700]])
+    y.extend(get_yCircle()[:3700])
+    y.extend(get_ySquare()[:3700])
+    y.extend(get_yTriangle()[:3700])
     
     return X, y
     
