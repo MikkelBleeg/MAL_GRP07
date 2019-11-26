@@ -106,6 +106,44 @@ def getShapes():
 
     
     return xAppend, yAppend
+
+def getNewShapes():
+    imageList = glob.glob('NewTestData/*.png')
+    x  = np.array([np.array(Image.open(fname)) for fname in imageList])
+    return x
     
+def oneHotcleanup(data):
+    for i in range(data.shape[0]):
+        for n in range(data[i].shape[0]):
+
+            if data[i, n] < 0.9:
+                data[i, n] = 0
+            else:
+                data[i, n] = 1
+            
+    return data
 
 
+def oneHotDecode(data):
+    retData = []
+    for i in range(data.shape[0]):
+        decoded = label_encoder.inverse_transform([argmax(data[i,:])])
+        retData.append(decoded)
+        
+    return retData
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
